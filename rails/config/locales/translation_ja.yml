@@ -1,0 +1,42 @@
+ja:
+  activerecord:
+    models:
+      group: "group"  #g
+      item: "項目"  #g
+      user: "ユーザー"  #g
+
+    attributes:
+      group:
+        product_group: "製品グループ"  #g
+        product_name: "製品名"  #g
+        product_icon: "製品のアイコン"  #g
+        items: "アイテム"  #g
+
+      item:
+        register_date: "登録日"  #g
+        item_title: "アイテムのタイトル"  #g
+        item_price: "商品の価格"  #g
+        author: "著者"  #g
+        creator: "クリエイター"  #g
+        publisher: "出版社"  #g
+        isbn: "Isbn"  #g
+        jancode: "Jancode"  #g
+        release_date: "発売日"  #g
+        publication_date: "出版日"  #g
+        item_image_small: "アイテムイメージの小型"  #g
+        item_image_large: "アイテムイメージの大規模な"  #g
+        item_link: "アイテムリンク"  #g
+        group: "グループ"  #g
+
+      user:
+        login: "ユーザID"  #g
+        email: "メールアドレス"  #g
+        crypted_password: "暗号化されたパスワード"  #g
+        salt: "ソルト"  #g
+        remember_token: "トークン"  #g
+        remember_token_expires_at: "トークン期限が切れる"  #g
+        apikey: "Apikey"  #g
+        items: "アイテム"  #g
+        password: "パスワード"  #g
+        password_confirmation: "パスワードの確認"  #g
+

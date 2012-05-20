@@ -1,0 +1,43 @@
+!!! XML
+!!!
+%html
+  %head
+    %meta{'http-equiv' => 'content', :content => 'text/html; charset=utf-8'}
+    %meta{:name => 'viewport', :content => 'width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;'}
+    %title tmarker
+    %link{:href => '/style.css', :rel => 'stylesheet', :type => 'text/css', :media => 'screen'}
+    %link{:href => '/iui/iui.css', :rel => 'stylesheet', :type => 'text/css', :media => 'screen'}
+    %script{:type => 'text/javascript', :src => 'iui/iui.js'}
+  %body
+    - if @success
+      .toolbar
+        %h1#ipageTitle 商品登録成功
+      #item{:selected => 'true'}
+        - if @items[:item_image_small]
+          %img{:src => "#{@items[:item_image_small]}"}
+        - else
+          %img{:src => '/images/noimg-small.gif'}
+        - if @items[:item_title] != nil
+          %p 商品名：#{@items[:item_title]}
+        - if @items[:item_price] != nil
+          %p 価格：#{@items[:item_price]}円
+        - if @items[:author] != nil
+          %p 著者：#{@items[:author]}
+        - if @items[:creator] != nil
+          %p 作者：#{@items[:creator]}
+        - if @items[:publisher] != nil
+          %p 発売元：#{@items[:publisher]}
+        - if @items[:isbn] != nil
+          %p ISBN：#{@items[:isbn]}
+        - elsif @items[:jancode] != nil
+          %p EAN：#{@items[:jancode]}
+        - if @items[:release_date] != nil
+          %p 発売日：#{@items[:release_date].strftime("%Y/%m")}
+        - elsif @items[:publication_date] != nil
+          %p 発売日：#{@items[:publication_date].strftime("%Y/%m")}
+    - else
+      .toolbar
+        %h1#ipageTitle 商品登録失敗
+      #item{:selected => 'true'}
+        - @messages.each do |msg|
+          %p #{msg}

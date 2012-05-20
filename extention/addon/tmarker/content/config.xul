@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://tmarker/skin/tmarker.css" type="text/css"?>
+<?xml-stylesheet href="chrome://global/skin" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://tmarker/locale/tmarker.dtd">
+<prefwindow id="tmarkerConfig" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  title="&tmarker.config.title;" button="accept,cancel" class="tmarkerConfigDialog">
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="tmarker-bundle" src="chrome://tmarker/locale/tmarker.properties" />
+  </stringbundleset>
+  <prefpane id="tmarkerPaneMain">
+    <preferences>
+      <preference id="tmarkerPrefApikey" name="extensions.tmarker.apikey" type="string"/>
+    </preferences>
+    <groupbox>
+      <caption label="&tmarker.config.caption;"/>
+      <hbox>
+        <textbox id="apikey" type="password" preference="tmarkerPrefApikey" flex="1"/>
+      </hbox>
+    </groupbox>
+  </prefpane>
+</prefwindow>

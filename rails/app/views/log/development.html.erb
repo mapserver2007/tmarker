@@ -1,0 +1,10 @@
+<div id="contents">
+  <div class="bar">
+    <h2><%= m('message_log_development') %></h2>
+  </div>
+  <div class="development_log">
+    <% @development_log.each_with_index do |log, i| %>
+    <%= development_list(log, i) %>
+  <% end %>
+  </div>
+</div>

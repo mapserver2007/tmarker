@@ -1,0 +1,27 @@
+<div id="contents">
+  <div class="bar">
+    <h2><%= @title %></h2>
+  </div>
+  <div class="authenticate">
+    <p><%= m('message_signup_success') %></p>
+    <div class="authenticate_success">
+      <table cellspacing="0" cellpadding="0" border="0" style="border-top: 1px solid #DBDBDB">
+        <tbody>
+          <tr>
+            <th><%= m('message_username') %></th>
+            <td><%= @user.result_confirm[:login] %></td>
+          </tr>
+          <tr>
+            <th><%= m('message_mailaddr') %></th>
+            <td><%= @user.result_confirm[:email] %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="padding: 10px">
+      <%= link_to(m('message_toppage'), '/') %>
+      <%= link_to_mypage %>
+      <%= link_to_myconfig %>
+    </div>
+  </div>
+</div>

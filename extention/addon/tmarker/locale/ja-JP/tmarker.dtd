@@ -1,0 +1,8 @@
+<!ENTITY tmarker.application.name "tmarker">
+<!ENTITY tmarker.config.title "&tmarker.application.name;設定メニュー">
+<!ENTITY tmarker.context.apikey "APIキーを設定">
+<!ENTITY tmarker.context.apikey.accesskey "A">
+<!ENTITY tmarker.context.home "&tmarker.application.name;のWebサイトへ移動">
+<!ENTITY tmarker.context.home.accesskey "H">
+<!ENTITY tmarker.config.title "&tmarker.application.name;設定メニュー">
+<!ENTITY tmarker.config.caption "APIキー">

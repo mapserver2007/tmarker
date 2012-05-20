@@ -1,0 +1,11 @@
+.tmarkerPanelImageOn {
+  list-style-image: url("chrome://tmarker/skin/on.gif");
+}
+
+.tmarkerPanelImageOff {
+  list-style-image: url("chrome://tmarker/skin/off.gif")!important;
+}
+
+.tmarkerConfigDialog {
+  width: 300px;
+}

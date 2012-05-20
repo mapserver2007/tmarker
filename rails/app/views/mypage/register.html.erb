@@ -1,0 +1,29 @@
+<%= render :partial => 'mypage/tab' %>
+<div id="tab_container_in">
+  <div id="mypage_contents">
+    <div id="left_container">
+      <div id="left_container_detail_in">
+        <div class="bar">
+          <h2><%= m('message_register_search') %></h2>
+        </div>
+        <div id="register_container">
+          <% form_tag(mypage_register_url(:id => current_user.login)) do -%>
+            <p><%= m('message_register_search_help') %></p>
+            <%= text_field_tag("jancode", nil, :class => 'register_search_input') %>
+            <%= submit_tag(m('message_register_search_button')) %>
+          <% end -%>
+        </div>
+        <% unless @items.nil? %>
+        <div class="bar">
+          <h2><%= m('message_register_search_result') %></h2>
+        </div>
+          <div class="register_search_container">
+            <% form_tag mypage_add_wish_url(:id => current_user.login ) do -%>
+              <%= search_by_jancode(@items) %>
+            <% end -%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

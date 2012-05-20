@@ -1,0 +1,9 @@
+<div class="block">
+  <div style="border: 1px solid #666666;">
+  <% @role.each do |e| -%>
+    <% e.each do |name, bool| -%>
+    <%= render :partial => name.to_s if bool %>
+    <% end %>
+  <% end %>
+  </div>
+</div>

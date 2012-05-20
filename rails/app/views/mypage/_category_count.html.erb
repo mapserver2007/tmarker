@@ -1,0 +1,10 @@
+<p class="bar"><%= m('message_side_category_count') %></p>
+<div id="category_count">
+  <% if @category_count.length > 0 -%>
+    <% @category_count.each do |category| -%>
+    <%= side_category_count(category) %>
+    <% end -%>
+  <% else -%>
+    <%= category_list_notfound %>
+  <% end %>
+</div>

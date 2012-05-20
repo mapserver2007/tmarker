@@ -1,0 +1,38 @@
+# This controller handles the login/logout function of the site.
+class SessionsController < ApplicationController
+  before_filter :title
+
+  # render new.rhtml
+  def new
+    @login_failure = false
+  end
+
+  def create
+    self.current_user = User.authenticate(params[:login], params[:password])
+    if logged_in?
+      if params[:remember_me] == "1"
+        current_user.remember_me unless current_user.remember_token?
+        cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
+      end
+      unless flash[:forward_to].nil?
+        redirect_to(flash[:forward_to])
+      else
+        render :action => 'success'
+      end
+    else
+      @login_failure = true
+      render :action => 'new'
+    end
+  end
+
+  def destroy
+    self.current_user.forget_me if logged_in?
+    cookies.delete :auth_token
+    reset_session
+    redirect_back_or_default('/')
+  end
+
+  def title
+    @title = application_title('message_login')
+  end
+end

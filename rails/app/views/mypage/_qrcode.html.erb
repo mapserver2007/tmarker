@@ -1,0 +1,4 @@
+<p class="bar"><%= m('message_side_qrcode') %></p>
+<div id="qrcode">
+  <%= image_tag(mypage_qrcode_url(:id => current_user.login)) %>
+</div>

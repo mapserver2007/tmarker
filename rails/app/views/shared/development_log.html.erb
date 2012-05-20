@@ -1,0 +1,10 @@
+<p class="bar">
+  <%= link(development_log_url, m('message_log_development')) %>
+</p>
+<div id="development_log">
+  <ul>
+  <% @development_log.each do |log| %>
+    <li><%= log.title %></li>
+  <% end %>
+  </ul>
+</div>

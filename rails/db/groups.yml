@@ -1,0 +1,139 @@
+---
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-book.gif
+    product_group: Book
+    id: "1"
+    product_name: !binary |
+      5pys
+
+  attributes_cache: {}
+
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-music.gif
+    product_group: Music
+    id: "2"
+    product_name: !binary |
+      6Z+z5qW9
+
+  attributes_cache: {}
+
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-ce.gif
+    product_group: CE
+    id: "3"
+    product_name: !binary |
+      44Ko44Os44Kv44OI44Ot44OL44Kv44K5
+
+  attributes_cache: {}
+
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-kitchen.gif
+    product_group: Kitchen
+    id: "4"
+    product_name: "\xE3\x83\x9B\xE3\x83\xBC\xE3\x83\xA0&\xE3\x82\xAD\xE3\x83\x83\xE3\x83\x81\xE3\x83\xB3"
+  attributes_cache: {}
+
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-dvd.gif
+    product_group: DVD
+    id: "5"
+    product_name: DVD
+  attributes_cache: {}
+
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-video.gif
+    product_group: Video
+    id: "6"
+    product_name: !binary |
+      44OT44OH44Kq
+
+  attributes_cache: {}
+
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-software.gif
+    product_group: Software
+    id: "7"
+    product_name: !binary |
+      44K944OV44OI44Km44Kn44Ki
+
+  attributes_cache: {}
+
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-videogames.gif
+    product_group: Video Games
+    id: "8"
+    product_name: !binary |
+      44Ky44O844Og
+
+  attributes_cache: {}
+
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-toy.gif
+    product_group: Toy
+    id: "9"
+    product_name: "\xE3\x81\x8A\xE3\x82\x82\xE3\x81\xA1\xE3\x82\x83&\xE3\x83\x9B\xE3\x83\x93\xE3\x83\xBC"
+  attributes_cache: {}
+
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-sports.gif
+    product_group: Sports
+    id: "10"
+    product_name: !binary |
+      44K544Od44O844OE
+
+  attributes_cache: {}
+
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-health.gif
+    product_group: Health and Beauty
+    id: "11"
+    product_name: "\xE3\x83\x98\xE3\x83\xAB\xE3\x82\xB9&\xE3\x83\x93\xE3\x83\xA5\xE3\x83\xBC\xE3\x83\x86\xE3\x82\xA3\xE3\x83\xBC"
+  attributes_cache: {}
+
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-watch.gif
+    product_group: Watch
+    id: "12"
+    product_name: !binary |
+      5pmC6KiI
+
+  attributes_cache: {}
+
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-baby.gif
+    product_group: Baby Product
+    id: "13"
+    product_name: "\xE3\x83\x99\xE3\x83\x93\xE3\x83\xBC&\xE3\x83\x9E\xE3\x82\xBF\xE3\x83\x8B\xE3\x83\x86\xE3\x82\xA3"
+  attributes_cache: {}
+
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-apparel.gif
+    product_group: Apparel
+    id: "14"
+    product_name: "\xE3\x82\xA2\xE3\x83\x91\xE3\x83\xAC\xE3\x83\xAB&\xE3\x82\xB7\xE3\x83\xA5\xE3\x83\xBC\xE3\x82\xBA"
+  attributes_cache: {}
+
+- !ruby/object:Group
+  attributes:
+    product_icon: icon-other.gif
+    product_group: Other
+    id: "15"
+    product_name: !binary |
+      44Gd44Gu5LuW
+
+  attributes_cache: {}
+

@@ -1,0 +1,76 @@
+<%= render :partial => 'mypage/tab' %>
+<div id="tab_container_in">
+  <div id="mypage_contents">
+    <div id="left_container">
+      <div id="left_container_detail_in">
+        <div class="bar">
+          <h2><%= m('message_your_download') %></h2>
+        </div>
+        <div id="download_container">
+          <div class="star">
+            <h2>何ができるの？</h2>
+          </div>
+          <div class="download_container_in">
+            <p>tmarkerのGreasemonkeyスクリプトまたはアドオンを使うことでAmazonの<%= link_to("ほしい物リスト", "http://www.amazon.co.jp/gp/registry/wishlist/ref=wish_list") %>と連携ができます。</p>
+          </div>
+          <div class="star">
+            <h2>インストール</h2>
+          </div>
+          <div class="download_container_in">
+            <p>Greasemonkeyスクリプト、Firefoxアドオンのどちらかをインストールして下さい。</p>
+            <table class="common" cellspacing="0" cellpadding="0" border="0">
+              <tbody>
+                <tr>
+                  <th>利用方法</th>
+                  <th>対応ブラウザ</th>
+                  <th>注意事項</th>
+                  <th>ダウンロード</th>
+                </tr>
+                <tr>
+                  <td>Greasemonkey用スクリプト</td>
+                  <td>Firefox1.5以上</td>
+                  <td><%= link_to("Greasemonkey", "https://addons.mozilla.org/ja/firefox/addon/748") %>をインストールしておく</td>
+                  <td><%= link_to("tmarker.user.js", mypage_gm_url(:file => "tmarker.user.js")) %></td>
+                </tr>
+                <tr>
+                  <td>Firefoxアドオン</td>
+                  <td>Firefox3.0以上</td>
+                  <td>なし</td>
+                  <td><%= link_to("tmarker.xpi", mypage_addon_url(:file => "tmarker-0.0.3.xpi")) %></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="star">
+            <h2>使い方(Greasemonkeyスクリプト)</h2>
+          </div>
+          <div class="download_container_in">
+            <p>Amazonの商品ページに移動します。</p>
+            <p>インストール直後の場合はAPIキーの入力が求められます。tmarkerにユーザ登録したときにメールで送られてきたAPIキーを入力します。</p>
+            <%= image_tag("/images/help/gm_001.jpg") %>
+            <p>画面右側にtmarkerの「買いたいものリスト」ボタンが表示されるので押下します。</p>
+            <%= image_tag("/images/help/gm_002.jpg") %>
+            <p>登録処理が始まりますのでしばらく待ちます。</p>
+            <%= image_tag("/images/help/gm_003.jpg") %>
+            <p>その後、tmarkerの買いたいものリスト一覧が表示されます（ログインしていない場合はログイン画面に遷移します）。</p>
+            <p>一覧に先程登録した商品が表示されれば成功です。</p>
+            <%= image_tag("/images/help/gm_004.jpg") %>
+          </div>
+          <div class="star">
+            <h2>使い方(Firefoxアドオン)</h2>
+          </div>
+          <div class="download_container_in">
+            <p>ステータスバーを確認してアドオンを有効にします。</p>
+            <%= image_tag("/images/help/addon_001.jpg") %>
+            <span>無効</span>
+            <%= image_tag("/images/help/addon_002.jpg") %>
+            <span>有効</span>
+            <p>ステータスバーを右クリックしてAPIキーを入力します。tmarkerにユーザ登録したときにメールで送られてきたAPIキーを入力します。</p>
+            <%= image_tag("/images/help/addon_003.jpg") %>
+            <p>その後はGreasemonkeyスクリプトと同様の方法で使います。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

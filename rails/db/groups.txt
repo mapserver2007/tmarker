@@ -1,0 +1,15 @@
+insert into groups (product_group, product_name, product_icon) values ('Book', '本', 'icon-book.gif');
+insert into groups (product_group, product_name, product_icon) values ('Music', '音楽', 'icon-music.gif');
+insert into groups (product_group, product_name, product_icon) values ('CE', 'エレクトロニクス', 'icon-ce.gif');
+insert into groups (product_group, product_name, product_icon) values ('Kitchen', 'ホーム&キッチン', 'icon-kitchen.gif');
+insert into groups (product_group, product_name, product_icon) values ('DVD', 'DVD', 'icon-dvd.gif');
+insert into groups (product_group, product_name, product_icon) values ('Video', 'ビデオ', 'icon-video.gif');
+insert into groups (product_group, product_name, product_icon) values ('Software', 'ソフトウェア', 'icon-software.gif');
+insert into groups (product_group, product_name, product_icon) values ('Video Games', 'ゲーム', 'icon-videogames.gif');
+insert into groups (product_group, product_name, product_icon) values ('Toy', 'おもちゃ&ホビー', 'icon-toy.gif');
+insert into groups (product_group, product_name, product_icon) values ('Sports', 'スポーツ', 'icon-sports.gif');
+insert into groups (product_group, product_name, product_icon) values ('Health and Beauty', 'ヘルス&ビューティー', 'icon-health.gif');
+insert into groups (product_group, product_name, product_icon) values ('Watch', '時計', 'icon-watch.gif');
+insert into groups (product_group, product_name, product_icon) values ('Baby Product', 'ベビー&マタニティ', 'icon-baby.gif');
+insert into groups (product_group, product_name, product_icon) values ('Apparel', 'アパレル&シューズ', 'icon-apparel.gif');
+insert into groups (product_group, product_name, product_icon) values ('Other', 'その他', 'icon-other.gif');

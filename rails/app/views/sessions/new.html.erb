@@ -1,0 +1,47 @@
+<div id="contents">
+  <div class="bar">
+    <h2><%= @title %></h2>
+  </div>
+  <div class="authenticate">
+    <% if @login_failure %>
+    <div id="authenticate_error">
+      <h2><%= m('message_login_failure') %></h2>
+      <ul>
+        <li><%= m('message_login_failure_reason') %></li>
+      </ul>
+    </div>
+    <% end %>
+    <% form_tag session_path do -%>
+      <table style="border-collapse: collapse" class="authenticate_form">
+        <tbody>
+          <tr>
+            <td><label for="login"><%= m('message_username') %></label></td>
+            <td class="authenticate_input">
+              <%= text_field_tag :login %>
+              <p><%= m('message_login_username_description') %></p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="password"><%= m('message_password') %></label></td>
+            <td class="authenticate_input">
+              <%= password_field_tag :password %>
+              <p><%= m('message_login_password_description') %></p>
+            </td>
+          </tr>
+        <tr>
+          <td></td>
+          <td>
+            <p><%= check_box_tag 'remember_me' %> <%= m('message_login_remember_me') %></p>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <p><%= submit_tag 'Log in' %></p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    <% end -%>
+  </div>
+</div>

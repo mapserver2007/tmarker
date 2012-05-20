@@ -1,0 +1,41 @@
+<% set_all_item_data %>
+<div id="contents">
+  <div id="left_container">
+    <div id="left_container_in">
+      <div class="bar">
+        <h2><%= m('message_category') %></h2>
+      </div>
+      <%= render :file => 'index/header' %>
+      <div class="bar">
+        <h2>
+          <%= m('message_recent') %>
+          <%= rss %>
+          <%= atom %>
+        </h2>
+      </div>
+      <div id="item_list">
+        <% if @items.length > 0 -%>
+        <ol class="item_list">
+          <% @items.length.times do |i| %>
+            <%= generate_index_item_list(i) %>
+          <% end -%>
+        </ol>
+        <% else -%>
+          <%= item_list_notfound %>
+        <% end -%>
+      </div>
+      <div class="digg_pagination">
+        <%= paginate(@items) %>
+      </div>
+    </div>
+  </div>
+  <div id="right_container">
+    <%= render :file => 'index/side' %>
+  </div>
+</div>
+<% javascript_tag do -%>
+$(function(){
+  var item = new Item('<%= @items.to_json %>');
+  item.barcode();
+});
+<% end -%>

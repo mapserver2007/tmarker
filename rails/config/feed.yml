@@ -1,0 +1,20 @@
+# common
+site_url: http://tmarker.summer-lights.jp/
+feed_author: tmarker
+author: %s
+
+# public
+site_title: tmarker - 最近登録した商品
+site_subtitle: 最近登録されたすべての商品を表示します
+rss_url: http://tmarker.summer-lights.jp/feed.xml
+atom_url: http://tmarker.summer-lights.jp/feed.atom
+
+# private
+my_site_title: tmarker - %sが最近登録した商品
+my_site_subtitle: %sが最近登録されたすべての商品を表示します
+my_rss_url: http://tmarker.summer-lights.jp/%s/%s/feed.xml
+my_atom_url: http://tmarker.summer-lights.jp/%s/%s/feed.atom
+
+# error
+error_site_title: 商品は表示出来ません
+error_site_description: 商品の一覧は表示出来ません

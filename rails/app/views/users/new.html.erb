@@ -1,0 +1,51 @@
+<div id="contents">
+  <div class="bar">
+    <h2><%= @title %></h2>
+  </div>
+  <div class="authenticate">
+    <% if @signin_failure %>
+    <div id="authenticate_error"><%= error_messages_for :user,
+      :header_message => m('message_signup_failure'), :message => "" -%></div>
+    <% end %>
+    <% form_for :user, :url => users_path do |f| -%>
+    <table style="border-collapse: collapse" class="authenticate_form">
+      <tbody>
+        <tr>
+          <td><label for="login"><%= m('message_username') %></label></td>
+          <td class="authenticate_input">
+            <%= f.text_field :login %>
+            <p><%= m('message_signup_username_description') %></p>
+            <p>※ 各ユーザーのアドレスは、<span class="warning">http://tmarker.summer-lights.jp/my/ユーザー名/</span> となります。</p>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="email"><%= m('message_mailaddr') %></label></td>
+          <td class="authenticate_input">
+            <%= f.text_field :email %>
+            <p><%= m('message_signup_mailaddr_description') %></p>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="password"><%= m('message_password') %></label></td>
+          <td class="authenticate_input">
+            <%= f.password_field :password %>
+            <p><%= m('message_signup_password_description') %></p>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="password_confirmation"><%= m('message_password_confirm') %></label></td>
+          <td class="authenticate_input">
+            <%= f.password_field :password_confirmation %>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <p><%= submit_tag 'Sign up' %></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <% end -%>
+  </div>
+</div>

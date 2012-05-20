@@ -1,0 +1,46 @@
+<% set_detail_item_data(@items) %>
+<div id="contents">
+  <div id="left_container">
+    <div id="left_container_detail_in">
+      <div class="bar">
+        <h2><%= h @header_title %></h2>
+      </div>
+      <div id="detail_container">
+        <div class="detail_product_image">
+          <div class="detail_image">
+            <%= item_image %>
+          </div>
+        </div>
+        <div class="detail_description">
+        <% @to = (mypage_add_wish_url(:id => current_user.login) rescue "/") %>
+        <% form_tag @to do -%>
+          <div class="detail_product_description">
+            <h4><%= generate_detail_title %></h4>
+            <p><%= generate_detail_publisher %> / <%= generate_detail_release_date %></p>
+            <p class="price"><%= item_price %></p>
+          </div>
+          <hr noshade="noshade"/>
+          <h5><%= m('message_side_recommendation') %></h5>
+          <div class="recommendation">
+            <%= generate_recommendation %>
+          </div>
+          <hr noshade="noshade"/>
+          <h5><%= m('message_detail_quickmark') %></h5>
+          <%= generate_item_barcode %>
+          <% end -%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% javascript_tag do -%>
+$(function(){
+  var item = new Item();
+  item.display_barcode(
+    "<%= item_jancode %>",
+    "<%= item_jancode %>",
+    "ean13",
+    {barWidth:1, barHeight:15}
+  );
+});
+<% end -%>

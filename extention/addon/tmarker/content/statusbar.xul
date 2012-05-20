@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://tmarker/locale/tmarker.dtd">
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/x-javascript" src="chrome://tmarker/content/tmarker.js" />
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="tmarker-bundle" src="chrome://tmarker/locale/tmarker.properties" />
+  </stringbundleset>
+  <statusbar id="status-bar">
+    <statusbarpanel
+      id="tmarkerPanel"
+      class="tmarkerPanelImageOn"
+      tooltiptext="&tmarker.application.name;"
+      context="tmarkerContextMenu"
+      onclick="Tmarker.onSwitchStatus(event);">
+      <image tooltiptext="&tmarker.application.name;" id="tmarkerPanelImage"/>
+      <popup id="tmarkerContextMenu"
+        position="overlap"
+        onpopupshowing="event.stopPropagation();">
+        <menuitem
+          id="tmarkerContextMenuApikey"
+          label="&tmarker.context.apikey;"
+          accesskey="&tmarker.context.apikey.accesskey;"
+          oncommand="Tmarker.showConfig();"
+          onclick="event.stopPropagation();"
+          onpopupshowing="event.stopPropagation();">
+        </menuitem>
+        <menuseparator/>
+        <menuitem
+          id="tmarkerContextMenuApikey"
+          label="&tmarker.context.home;"
+          accesskey="&tmarker.context.home.accesskey;"
+          oncommand="Tmarker.toMypage();"
+          onclick="event.stopPropagation();"
+          onpopupshowing="event.stopPropagation();">
+        </menuitem>
+      </popup>
+    </statusbarpanel>
+  </statusbar>
+</overlay>

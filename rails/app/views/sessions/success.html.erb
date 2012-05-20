@@ -1,0 +1,14 @@
+<div id="contents">
+  <div class="bar">
+    <h2><%= @title %></h2>
+  </div>
+  <div class="authenticate">
+    <p><%= m('message_login_success') %></p>
+    <div class="authenticate_success"><%= m('message_welcome') % current_user.login %></div>
+    <div style="padding: 10px">
+      <%= link_to(m('message_toppage'), '/') %>
+      <%= link_to_mypage %>
+      <%= link_to_myconfig %>
+    </div>
+  </div>
+</div>

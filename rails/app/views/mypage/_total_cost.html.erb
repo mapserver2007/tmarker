@@ -1,0 +1,30 @@
+<p class="bar"><%= m('message_side_total_cost') %></p>
+<div id="total_cost">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+    <% @total_cost.each_with_index do |total, i| %>
+      <% total.each do |label, price| %>
+      <tr>
+        <td width="21%">
+          <div>【<%= label %>】</div>
+          <div style="font-size:12px;"><%= price[:price] %>円</div>
+        </td>
+        <td>
+          <div class="total_cost_label">
+            <span class="left"><%= price[:min] %>円</span>
+            <span style="float:right;"><%= price[:max] %>円</span>
+          </div>
+          <div class="graph_box">
+            <% id = "total_cost_#{i+1}" -%>
+            <div id="<%= id %>" class="total_cost"></div>
+            <% javascript_tag do -%>
+              mypage.total_cost("<%= id %>", <%= price.to_json %>);
+            <% end -%>
+          </div>
+        </td>
+      </tr>
+      <% end %>
+    <% end %>
+    </tbody>
+  </table>
+</div>

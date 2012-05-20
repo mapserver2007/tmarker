@@ -1,0 +1,11 @@
+<div id="category_link">
+  <% if @groups.length == 0 -%>
+  <%= category_list_notfound %>
+  <% else -%>
+  <ul>
+    <% @groups.each do |e| %>
+    <li><%= header_index_category_list(e.group.product_icon, e.group.product_name) %></li>
+    <% end -%>
+  </ul>
+  <% end -%>
+</div>

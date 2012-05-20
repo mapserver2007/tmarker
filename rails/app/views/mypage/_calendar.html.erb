@@ -1,0 +1,14 @@
+<p class="bar"><%= m('message_side_calendar') %></p>
+<div id="calendar">
+  <div class="slide_date"><%= side_slide_date(@calendar) %></div>
+  <table class="calendar" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <% %w[日 月 火 水 木 金 土].each do |d| -%>
+        <td class="head_day"><%= d %></td>
+        <% end -%>
+      </tr>
+      <%= side_calendar(@calendar) %>
+    </tbody>
+  </table>
+</div>

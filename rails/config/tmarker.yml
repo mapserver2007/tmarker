@@ -1,0 +1,160 @@
+#===========================================================#
+# Tmarker config                                            #
+#===========================================================#
+
+# Application name
+application_name: tmarker
+
+# The indication number
+per_page: 30
+
+# Default role config
+role:
+  page_in_item: 10
+  profile_in_item: 1
+  qrcode_in_item: 1
+  category_count_in_item: 1
+  total_cost_in_item: 1
+  calendar_in_item: 1
+  page_in_wish: 10
+  category_count_in_wish: 1
+  calendar_in_wish: 1
+
+# Price list
+price_list:
+- price_label: 1000円以下
+  price_range: "0, 1000"
+- price_label: 1001円以上3000円以下
+  price_range: "1001, 3000"
+- price_label: 3001円以上5000円以下
+  price_range: "3001, 5000"
+- price_label: 5001円以上10000円以下
+  price_range: "5001, 10000"
+- price_label: 10001円以上
+  price_range: "10001, 0"
+
+# Total costs
+total_costs:
+- total_cost_label: 今日
+  total_cost_name: day
+- total_cost_label: 今週
+  total_cost_name: week
+- total_cost_label: 今月
+  total_cost_name: month
+
+# Mypage item per page
+mypage_paginate: "5,10,20,30,40,50"
+
+# Mypage tab name
+mypage_tab:
+- tab_id:   item
+  tab_name: 買ったものリスト
+- tab_id:   wish
+  tab_name: 買いたいものリスト
+- tab_id:   register
+  tab_name: 買いたいもの追加
+- tab_id:   download
+  tab_name: ツールダウンロード
+- tab_id:   blogparts
+  tab_name: ブログパーツ
+
+# Application message
+message_welcome: ようこそ、%sさん！
+message_your_item: %sさんの登録した商品
+message_your_wish: %sさんの買いたいものリスト
+message_your_register: %sさんの買いたいもの追加
+message_your_download: Greasemonkeyスクリプト、Firefoxアドオンのダウンロード
+message_your_blogparts: ブログパーツの設定
+message_default_username: ゲスト
+message_login: ログイン
+message_logout: ログアウト
+message_login_success: ログインが成功しました
+message_login_failure: ログインに失敗しました
+message_login_failure_reason: ユーザIDまたはパスワードが間違っています
+message_username: ユーザID
+message_login_username_description: ※ 3文字以上で、半角英数小文字、ハイフン(-)、アンダーバー(_)が使用できます。
+message_password: パスワード
+message_password_confirm: パスワード確認
+message_login_password_description: ※ 4文字以上で、半角英数小文字が使用できます。
+message_mailaddr: メールアドレス
+message_login_remember_me: ログイン状態を記憶する
+message_signup: 新規登録
+message_signup_success: ユーザの登録が完了しました
+message_signup_failure: ユーザの登録に失敗しました
+message_signup_username_description: ※ 3文字以上で、半角英数小文字、ハイフン(-)、アンダーバー(_)が使用できます。
+message_signup_password_description: ※ 4文字以上で、半角英数小文字が使用できます。
+message_signup_mailaddr_description: ※ 登録メールアドレスに商品の登録結果を通知します。
+message_toppage: tmarkerホーム
+message_mypage: マイページ
+message_mypage_sort_category: カテゴリで絞り込み▼
+message_mypage_sort_price: 値段で絞り込み▼
+message_myconfig: 設定
+message_myconfig_update: 更新する
+message_myconfig_mypage_header: マイページ設定
+message_myconfig_item_page: 登録商品ページ表示数設定
+message_myconfig_item_side_menu: 登録商品ページサイドバー表示設定
+message_myconfig_wish_page: 買いたいものリストページ商品表示数設定
+message_myconfig_wish_side_menu: 買いたいものリストページサイドバー表示設定
+message_myconfig_success: 設定の更新が完了しました
+message_myconfig_page: ページあたりの表示する商品数
+message_myconfig_checkbox_label: 表示する
+message_detail: この商品の詳細を見る
+message_detail_page: %sの詳細
+message_detail_image: %sの画像
+message_detail_reference_user: この商品を登録しているユーザ
+message_detail_quickmark: QuickMarkで撮影すると登録出来ます。
+message_category: カテゴリ一覧
+message_recent: 最近登録した商品
+message_side_profile: プロフィール
+message_side_qrcode: パーソナルQRコード
+message_side_total_cost: 購入金額合計
+message_side_calendar: カレンダー
+message_side_category_count: カテゴリ別登録数
+message_side_recommendation: おすすめの商品
+message_log_development: 開発履歴
+message_log_tracking: トラッキング履歴
+message_wish_add: 買いたいものリストに追加
+message_wish_recent: 買いたいものリスト一覧
+message_register_search: 商品を検索する
+message_register_search_help: JANコードを入力してください(例：4988013787940)
+message_register_search_result: 商品検索結果
+message_register_search_button: 検索
+message_blogparts_input_description: ブログパーツを有効にしたいサイトのURLを入力して下さい。
+message_blogparts_url_1: URL(1)
+message_blogparts_url_2: URL(2)
+message_blogparts_url_3: URL(3)
+message_blogparts_button: 登録
+
+message_no_title: 商品名不明
+message_no_publisher: 発売元不明
+message_no_price: 価格不明
+message_no_release_date: 発売日不明
+message_no_category: カテゴリはありません
+message_no_item: 登録商品はありません
+message_no_recommendation: おすすめ商品はありません
+message_no_search: 商品は見つかりませんでした
+
+error_404: ページが見つかりませんでした
+
+logo_image: /images/logo.png
+logo_rss: /images/rss.png
+logo_atom: /images/atom.png
+item_no_image: /images/noimg-small.gif
+item_no_image_large: /images/noimg-large.gif
+icon_zoom: /images/icon-zoom.gif
+icon_delete: /images/icon-delete.gif
+icon_lock: /images/icon-lock.gif
+icon_unlock: /images/icon-unlock.png
+icon_wish: /images/icon-wish.png
+
+url_wish: http://i.tmarker.summer-lights.jp/wish/%s/%s
+url_blogparts: http://i.tmarker.summer-lights.jp/blogparts/%s?func=%s&width=%s&count=%s
+
+blogparts_default_width: 250
+blogparts_default_count: 3
+
+myconfig_profile_image: /images/thumbnail-profile.png
+myconfig_qrcode_image: /images/thumbnail-qrcode.png
+myconfig_category_count_image: /images/thumbnail-category_count.png
+myconfig_total_cost_image: /images/thumbnail-total_cost.png
+myconfig_calendar_image: /images/thumbnail-calendar.png

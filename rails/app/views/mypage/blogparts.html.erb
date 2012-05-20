@@ -1,0 +1,70 @@
+<%= render :partial => 'mypage/tab' %>
+<div id="tab_container_in">
+  <div id="mypage_contents">
+    <div id="left_container">
+      <div id="left_container_detail_in">
+        <div class="bar">
+          <h2><%= m('message_your_blogparts') %></h2>
+        </div>
+        <div id="blogparts_container">
+          <div class="star">
+            <h2>ブログパーツのアクセス制限設定について</h2>
+          </div>
+          <div class="blogparts_container_in">
+            <p>tmarkerのブログパーツは下記フォームで登録したURLのホストでのみ有効となります。</p>
+            <p>URLは最大で3つまで登録ができます。</p>
+          </div>
+          <div class="star">
+            <h2>ブログパーツ用コードを取得</h2>
+          </div>
+          <div class="blogparts_container_in">
+            <p>以下のブログパーツ用コードをブログ等に貼りつけて下さい。</p>
+            <table style="border-collapse: collapse" class="blogparts_form">
+              <tbody>
+                <tr>
+                  <td>買ったもの用</td>
+                  <td>
+                    <div class="blogparts_code">
+                      <%= text_area_tag "", @parts_url[:item], :readonly => true, :onclick => "$(this).select();"%>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>買いたいもの用</td>
+                  <td>
+                    <div class="blogparts_code">
+                      <%= text_area_tag "", @parts_url[:wish], :readonly => true, :onclick => "$(this).select();"%>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="star">
+            <h2>ブログパーツを利用したいURLを登録</h2>
+          </div>
+          <%= blogparts_site_error %>
+          <% form_tag(mypage_blogparts_url(:id => current_user.login)) do -%>
+            <table style="border-collapse: collapse" class="blogparts_form">
+              <tbody>
+                <% @sites.each_with_index do |site, i| -%>
+                <tr>
+                  <td><label for="site[#{i+1}]"><%= m("message_blogparts_url_#{i+1}") %></label></td>
+                  <td class="blogparts_site_input">
+                    <%= text_field_tag "site[#{i+1}]", site %>
+                  </td>
+                </tr>
+                <% end -%>
+                <tr>
+                  <td>
+                    <p><%= submit_tag m('message_blogparts_button') %></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          <% end -%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

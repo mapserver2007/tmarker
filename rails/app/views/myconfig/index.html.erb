@@ -1,0 +1,41 @@
+<div id="contents" class="mypage">
+  <div id="left_container">
+    <div id="left_container_config_in">
+      <div class="bar">
+        <h2><%= m('message_myconfig_mypage_header') %></h2>
+      </div>
+      <% form_tag myconfig_save_url(:id => current_user.login) do -%>
+      <div class="bar2">
+        <h2><%= m('message_myconfig_item_page') %></h2>
+      </div>
+      <div id="myconfig_page">
+        <%= generate_myconfig_page(@page_in_item) %>
+      </div>
+      <div class="bar2">
+        <h2><%= m('message_myconfig_item_side_menu') %></h2>
+      </div>
+      <div>
+        <ol class="myconfig_sidebar_list">
+          <%= generate_myconfig_sidebar_list_by_item %>
+        </ol>
+      </div>
+      <div class="clearfix"></div>
+      <div class="bar2">
+        <h2><%= m('message_myconfig_wish_page') %></h2>
+      </div>
+      <div id="myconfig_page">
+        <%= generate_myconfig_page(@page_in_wish) %>
+      </div>
+      <div class="bar2">
+        <h2><%= m('message_myconfig_wish_side_menu') %></h2>
+      </div>
+      <div>
+        <ol class="myconfig_sidebar_list">
+          <%= generate_myconfig_sidebar_list_by_wish %>
+        </ol>
+      </div>
+      <div class="myconfig_renew"><%= submit_tag m('message_myconfig_update') %></div>
+      <% end -%>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+content tmarker                              jar:chrome/tmarker.jar!/content/
+skin    tmarker classic/1.0                  jar:chrome/tmarker.jar!/skin/
+locale  tmarker ja-JP                        jar:chrome/tmarker.jar!/locale/ja-JP/
+overlay chrome://browser/content/browser.xul chrome://tmarker/content/statusbar.xul
+style   chrome://browser/content/browser.xul chrome://tmarker/skin/tmarker.css

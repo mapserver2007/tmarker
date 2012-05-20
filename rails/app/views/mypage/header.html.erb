@@ -1,0 +1,21 @@
+<div id="category_link">
+  <% if @categories.length == 0 -%>
+  <%= category_list_notfound %>
+  <% else -%>
+  <ul>
+    <% @categories.each do |e| -%>
+    <li><%= header_mypage_category_list(e.group.product_icon, e.group.product_name, @page_name) %></li>
+    <% end -%>
+  </ul>
+  <% end -%>
+</div>
+<div class="mypage_menu">
+  <ul>
+    <li id="sort_category"><%= link_to(m('message_mypage_sort_category'), "#") %></li>
+    <li id="sort_price"><%= link_to(m('message_mypage_sort_price'), "#") %></li>
+  </ul>
+</div>
+<% javascript_tag do -%>
+  mypage.sort_category(<%= category_to_json %>);
+  mypage.sort_price(<%= price_to_json %>);
+<% end -%>
